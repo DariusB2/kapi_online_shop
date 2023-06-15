@@ -191,7 +191,6 @@ input {
   width: 100%;
   margin: 0.8rem 0;
   outline: none;
-  font-size: Roboto;
   font-weight: 400;
   padding: 0 5px;
 }
@@ -321,7 +320,7 @@ input[type="radio"] {
   display: grid;
   grid-template-columns: 1.6fr 0.7fr 0.7fr;
   grid-template-rows: 1fr;
-  gap: 0px 8px;
+  gap: 0 8px;
   grid-template-areas: ". . .";
 }
 .cardDetails input::-webkit-outer-spin-button,
@@ -345,14 +344,6 @@ input::-webkit-inner-spin-button {
   height: 3rem;
   border-radius: 2rem;
 }
-
-.paypal {
-  background-color: #fdc33a;
-}
-.paypalImg {
-  height: 2rem;
-}
-
 @media screen and (max-width: 600px) {
   .billing {
     padding: 0;
