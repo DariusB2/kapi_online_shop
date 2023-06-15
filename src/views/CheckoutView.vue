@@ -137,7 +137,7 @@ export default {
           <div class="section">
             <p class="disclaimer">
               By placing your order, you agree to our
-              <a href="/terms&conditions">Terms & Conditions</a>
+              <a href="/terms-and-conditions">Terms & Conditions</a>
             </p>
           </div>
         </div>
