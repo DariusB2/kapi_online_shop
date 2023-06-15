@@ -392,7 +392,6 @@
 
 <script>
 export default {};
-
 </script>
 
 <style scoped>
@@ -516,7 +515,6 @@ h2::after {
   right: 0;
   color: rgba(0, 0, 0, 0.8);
 }
-
 .carousel .item-price {
   font-size: 12px;
   margin: 0;
@@ -527,9 +525,6 @@ h2::after {
 }
 .carousel-indicators {
   bottom: -40px;
-}
-.list-inline {
-  margin: 0;
 }
 .star-rating i {
   font-size: 0.5rem;
@@ -559,7 +554,6 @@ h2::after {
   padding: 1rem;
   margin: 1rem 0;
 }
-
 .picks .highlight {
   color: var(--green);
 }
@@ -585,9 +579,7 @@ h2::after {
   box-shadow: 0 0 10px #00000040;
   transform: scale(1.02);
 }
-
 .card-img {
-  width: 200px;
   padding: 1.2rem;
   display: flex;
   justify-content: center;
@@ -619,32 +611,9 @@ h2::after {
   font-size: 110%;
   color: var(--green);
 }
-.stars {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-}
-.star {
-  font-size: 0.8rem;
-  color: var(--yellow);
-}
-.count {
-  color: var(--blue);
-  font-size: 0.7rem;
-  padding-left: 5px;
-}
-.cart {
-  text-decoration: none;
-  color: var(--blue);
-}
 .refurbished .highlight {
   color: var(--yellow);
 }
-
 @media screen and (max-width: 1000px) {
   .carousel .carousel-item .img-box {
     height: 90px;
@@ -657,9 +626,6 @@ h2::after {
   }
   .thumb-content h4 {
     font-size: 0.8rem;
-  }
-  .list-inline {
-    display: none;
   }
   .carousel-control-next-icon,
   .carousel-control-prev-icon {

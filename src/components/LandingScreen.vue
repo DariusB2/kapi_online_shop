@@ -138,7 +138,6 @@
   height: 400px;
   padding: 1rem 3rem;
 }
-
 .land-msg {
   width: 60%;
   display: flex;
@@ -149,7 +148,6 @@
   gap: 0.5rem;
   padding: 2rem;
 }
-
 .upper-msg {
   display: flex;
   flex-direction: column;
@@ -157,7 +155,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .msg {
   text-align: center;
 }
@@ -165,40 +162,32 @@
   display: flex;
   gap: 2rem;
 }
-
 a {
   color: var(--blue);
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 .upper-msg > h3 {
   font-style: italic;
 }
-
 .supercharged {
   color: var(--pink);
 }
-
 .assistants {
   color: var(--blue);
 }
-
 .brand {
   display: flex;
   gap: 0.3rem;
   align-items: center;
   justify-content: center;
 }
-
 .logo {
   width: 50px;
   margin: 1rem;
 }
-
 .land-img {
   width: 50%;
   display: flex;
@@ -206,20 +195,17 @@ a:hover {
   justify-content: center;
   background-color: var(--black);
 }
-
 .image {
   height: auto;
   max-height: 100%;
   padding: 2rem;
 }
-
 video {
   width: 100%;
   height: auto;
   border-radius: 2rem;
   max-height: 100%;
 }
-
 @media screen and (max-width: 900px) {
   .landing {
     flex-direction: column-reverse;
@@ -227,11 +213,9 @@ video {
     align-items: center;
     height: 500px;
   }
-
   .land-msg {
     padding: 2rem;
   }
-
   .image,
   video {
     display: none;

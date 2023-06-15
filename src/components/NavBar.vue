@@ -13,16 +13,25 @@ const shop = useShopStore();
   <nav class="navbar">
     <div class="burger-menu">
       <div class="dropdown">
-        <button
+        <a
             class="tools"
             type="button"
             id="dropdownProduct"
             data-bs-toggle="dropdown"
             aria-expanded="false"
         >
-          <Bars3Icon size=10000 />
-          <i class="fa-solid fa-bars"></i>
-        </button>
+          <Bars3Icon class="h-5 w-5-bar"/>
+        </a>
+<!--        <button-->
+<!--            class="tools"-->
+<!--            type="button"-->
+<!--            id="dropdownProduct"-->
+<!--            data-bs-toggle="dropdown"-->
+<!--            aria-expanded="false"-->
+<!--        >-->
+<!--          <Bars3Icon size=10000 />-->
+<!--          <i class="fa-solid fa-bars"></i>-->
+<!--        </button>-->
         <div class="dropdown-menu" aria-labelledby="dropdownProduct">
           <div class="productCategories">
             <ul class="categories">
@@ -67,14 +76,13 @@ const shop = useShopStore();
     </div>
     <div class="flex justify-between items-center">
       <div class="category">
-        <a href="/" class="categoryLink">Kapi Online Store</a>
+        <a href="/" class="title">Kapi Online Store</a>
       </div>
     </div>
-    <div class="tools">
-      <RouterLink class="flex gap-2 text-gray-500 hover:text-black" to="/cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <ShoppingBagIcon/>
-        <span class="text-black">{{ shop.cartQuantity }}</span>
+    <div class="">
+      <RouterLink class="d-flex" to="/cart">
+        <ShoppingBagIcon class="w-5"/>
+        <span class="w-5-bar">{{ shop.cartQuantity }}</span>
       </RouterLink>
     </div>
   </nav>
@@ -111,7 +119,6 @@ const shop = useShopStore();
   background-color: white;
   z-index: 2;
 }
-
 .dropdown-menu {
   padding: 1rem 1rem 0 1rem;
 }
@@ -126,8 +133,19 @@ const shop = useShopStore();
   text-decoration: none;
   color: black;
   transition: 0.2s;
+  font-size: large;
 }
 .categoryLink:hover {
+  color: var(--carbonLight);
+}
+.title {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+  font-size: xx-large;
+}
+.title:hover {
   color: var(--carbonLight);
 }
 .tools {
@@ -136,12 +154,6 @@ const shop = useShopStore();
 }
 .dropdown {
   background-color: transparent;
-}
-.dropdown-toggle::after {
-  content: none;
-}
-.product {
-  display: flex;
 }
 .info h4 {
   font-size: 0.9rem;
@@ -156,24 +168,22 @@ const shop = useShopStore();
     padding: 0.4rem 1rem;
   }
 }
-@media screen and (max-width: 500px) {
-  .product {
-    width: 90%;
-  }
+.h-5 {
+  height: 10%;
 }
-.fa-solid {
-  font-size: 1rem;
+.w-5 {
+  width: 100%;
+  padding-left: 80%;
+  color: black;
 }
-.fa-solid:hover {
-  color: grey;
-  transition: 0.4s;
+.w-5-bar {
+  width: 20%;
+  color: black;
 }
-.fa-solid {
-  color: var(--carbon);
-  font-size: 1.5rem;
-  transition: 0.6s;
+.w-5:hover {
+  color: var(--carbonLight);
 }
-.search .fa-solid {
-  font-size: 1rem;
+.w-5-bar:hover {
+  color: var(--carbonLight);
 }
 </style>

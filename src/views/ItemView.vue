@@ -13,34 +13,41 @@ const addToCart = () => {
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row gap-6">
-    <img class="rounded-xl bg-beige" :src="item.photo"  alt="image description"/>
-
-    <div class="flex flex-col gap-6 md:gap-8">
-      <div class="flex flex-col gap-2">
-        <h2 class="text-2xl font-bold">{{ item.title }}</h2>
-
+  <div class="d-flex">
+    <img class="h-25 w-25" :src="item.photo"  alt="image description"/>
+    <div class="">
+      <div class="">
+        <h2 class="">{{ item.title }}</h2>
         <div class="text-2xl">${{ item.price / 100 }}</div>
-
         <div>{{ item.description }}</div>
       </div>
-
       <button
-          class="flex justify-center bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-500 text-white rounded-md p-3"
+          class="d-flex p-3"
           @click="addToCart"
       >
         <transition mode="out-in">
-          <div v-if="shop.addedMessageShown" class="flex gap-2">
-            <CheckIcon class="w-6 h-6" />
+          <div v-if="shop.addedMessageShown" class="d-flex gap-2">
+            <CheckIcon class="w-2 h-2" />
             Added to cart!
           </div>
           <div v-else>Add to cart</div>
         </transition>
+      </button>
+      <button
+          class="d-flex p-3"
+          @click="$router.go(-1)"
+      >
+        Go back
       </button>
     </div>
   </div>
 </template>
 
 <style scoped>
-
+.h-25 {
+  height: 5%;
+}
+.w-25 {
+  width: 5%;
+}
 </style>

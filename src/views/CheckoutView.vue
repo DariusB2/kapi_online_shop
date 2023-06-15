@@ -1,3 +1,19 @@
+<script>
+export default {
+  data() {
+    return {
+      isShown: false,
+      email: '',
+    }
+    },
+        methods: {
+      onSubmit(event) {
+        console.log(event)
+      }
+    }
+};
+</script>
+
 <template>
   <section class="checkoutScreen">
     <div class="checkOutCard">
@@ -12,18 +28,23 @@
             </h4>
             <Transition name="slide-fade">
               <div v-show="!isShown" class="content">
-                <form action="" class="deliveryInfo">
-                  <input class="email" type="email" placeholder="Email" />
+                <form @submit="onSubmit" class="deliveryInfo">
+                  <input
+                      placeholder="Enter your email"
+                      v-model="email"
+                      required
+                      type="email"
+                  >
                   <div class="name">
-                    <input type="text" placeholder="First Name" />
-                    <input type="text" placeholder="Last Name" />
+                    <input type="text" placeholder="First Name" required/>
+                    <input type="text" placeholder="Last Name" required/>
                   </div>
-                  <input type="text" placeholder="Address" />
+                  <input type="text" placeholder="Address" required/>
                   <div class="location">
-                    <input type="text" placeholder="Postal Code" />
-                    <input type="text" placeholder="City" />
-                    <input type="text" placeholder="State" />
-                    <input type="text" placeholder="Country" />
+                    <input type="text" placeholder="Postal Code" required/>
+                    <input type="text" placeholder="City" required/>
+                    <input type="text" placeholder="State" required/>
+                    <input type="text" placeholder="Country" required/>
                   </div>
                 </form>
                 <form action="" class="deliveryMethods">
@@ -96,14 +117,14 @@
                       placeholder="Cardholder Name"
                     />
                     <div class="cardDetails">
-                      <input type="number" placeholder="Card Number" />
-                      <input type="number" placeholder="MM/YY" />
-                      <input type="number" placeholder="CVV" />
+                      <input type="number" placeholder="Card Number" required/>
+                      <input type="number" placeholder="MM/YY" required/>
+                      <input type="number" placeholder="CVV" required/>
                     </div>
                   </form>
                   <a href="/">
                     <div class="action">
-                      <button class="continue">
+                      <button class="continue" type="submit" value="Submit">
                         Finish <i class="fa-solid fa-arrow-right-long"></i>
                       </button>
                     </div>
@@ -125,15 +146,7 @@
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isShown: false,
-    };
-  },
-};
-</script>
+
 
 <style scoped>
 section {

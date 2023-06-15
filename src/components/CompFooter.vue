@@ -6,7 +6,7 @@
     <div class="footer-top">
       <div class="sections">
         <div class="logo-section">
-          <img class="logo" src="@/assets/logo.png" />
+          <img class="logo" src="@/assets/logo.png"  alt="image description"/>
         </div>
         <div class="section">
           <h3 class="subtitle">Service</h3>
@@ -79,11 +79,9 @@ export default {};
   cursor: pointer;
   text-decoration: none;
 }
-
 .go-top:hover {
   background-color: grey;
 }
-
 .go-top > h3 {
   font-size: 1rem;
   margin: 0;
@@ -108,29 +106,20 @@ export default {};
   display: flex;
   flex-direction: column;
 }
-
 .logo {
   width: 70px;
   background-color: white;
   margin-bottom: 0.3rem;
   padding: 0.4rem;
 }
-
-.description {
-  font-size: 0.7rem;
-  font-weight: 200;
-}
-
 .subtitle {
   font-size: 1.2rem;
 }
-
 .links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .link,
 .contactItem p {
   text-decoration: none;
@@ -140,11 +129,9 @@ export default {};
   font-weight: 300;
   margin: 0;
 }
-
 .fa-solid {
   font-size: 0.8rem;
 }
-
 .link:hover {
   color: grey;
   text-decoration: underline;
@@ -162,30 +149,6 @@ export default {};
 .contactItem p {
   padding-left: 0.5rem;
 }
-.social {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-.socialLink {
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.4s;
-  color: white;
-}
-
-.socialLink:hover {
-  color: var(--grey);
-}
-
-.divider {
-  width: 90vw;
-}
-.credits {
-  font-size: 0.7rem;
-  font-weight: 300;
-}
-
 @media screen and (max-width: 900px) {
   .sections {
     gap: 1rem;
@@ -200,7 +163,6 @@ export default {};
   .subtitle {
     font-size: 1rem;
   }
-
   .link,
   .contactItem p {
     font-size: 0.8rem;

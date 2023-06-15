@@ -1,22 +1,42 @@
-<template>
-  <section class="gaming">
-    <h1 class="title">Gaming</h1>
-  </section>
-</template>
+<script setup>
+import { useShopStore } from "@/store/shop";
+import {computed, ref} from "vue";
 
-<script>
-export default {};
+const shop = useShopStore();
+let filter = ref("gaming")
+
+const filteredForSale = computed(() => {
+  return shop.forSale.filter(product => product.type === filter.value)
+})
 </script>
 
-<style scoped>
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+<template>
+  <div class="main">
+    <div
+        class="w-100 d-flex"
+    >
+      <RouterLink
+          class="d-flex w-100"
+          v-for="item in filteredForSale"
+          v-bind:key="item.id"
+          :to="`/item/${item.id}`"
+      >
+        <img
+            class="w-25"
+            :src="item.photo"
+            alt="280 by 320 pixel placeholder"
+        />
+        <div class="">
+          <div>{{ item.title }}</div>
+          <div class="font-bold">${{ item.price / 100 }}</div>
+        </div>
+      </RouterLink>
+    </div>
+  </div>
+</template>
 
-.title {
-  color: var(--carbon);
+<style>
+.main {
+  padding: 5%;
 }
 </style>

@@ -42,28 +42,23 @@ export default {
     transform-origin: center center;
     animation-timing-function: ease-out;
   }
-
   10% {
     transform: scale(0.95);
     animation-timing-function: ease-in;
   }
-
   17% {
     transform: scale(0.98);
     animation-timing-function: ease-out;
   }
-
   33% {
     transform: scale(0.95);
     animation-timing-function: ease-in;
   }
-
   45% {
     transform: scale(1);
     animation-timing-function: ease-out;
   }
 }
-
 :root {
   --carbon: #414042;
   --carbonLight: #8e8e8e;
@@ -75,7 +70,6 @@ export default {
   --green: green;
   --yellow: #fed761;
 }
-
 * {
   margin: 0;
   padding: 0;

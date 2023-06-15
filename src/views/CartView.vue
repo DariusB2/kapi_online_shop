@@ -1,6 +1,6 @@
 <script setup>
 import { XMarkIcon } from "@heroicons/vue/24/outline";
-import { useShopStore } from "../store/shop";
+import { useShopStore } from "@/store/shop";
 
 const shop = useShopStore();
 </script>
@@ -8,23 +8,22 @@ const shop = useShopStore();
 <template>
   <div>
     <h2 class="text-2xl">Shopping Cart</h2>
-
     <div
         v-if="shop.cartQuantity > 0"
-        class="flex flex-col lg:flex-row lg:gap-6"
+        class="d-inline-flex pb-5 p-5"
     >
-      <div class="divide-y divide-gray-300 lg:w-2/3">
-        <div v-for="item in shop.cart" :key="item.id" class="py-6 flex gap-4">
-          <img class="w-32 bg-beige rounded-md" :src="item.photo" alt="item photo"/>
-          <div class="flex justify-between w-full">
-            <div class="w-9">
+      <div class="">
+        <div v-for="item in shop.cart" :key="item.id" class="d-flex p-5">
+          <img class="w-25" :src="item.photo" alt="item photo"/>
+          <div class="w-75">
+            <div class="w-50">
               <div>{{ item.title }}</div>
-              <div class="text-sm">${{ item.price / 100 }}</div>
+              <div class="">${{ item.price / 100 }}</div>
             </div>
 
-            <div>
+            <div class="">
               <select
-                  class="bg-white border border-gray-300 rounded px-2 py-1"
+                  class="d-inline-flex w-10"
                   v-model.number="item.quantity"
               >
                 <option v-for="i in item.quantity > 10 ? item.quantity : 10"
@@ -36,7 +35,7 @@ const shop = useShopStore();
 
             <div>
               <XMarkIcon
-                  class="w-5 h-5 text-gray-500 hover:text-black cursor-pointer"
+                  class="d-inline-flex w-10"
                   @click="shop.removeItem(item)"
               />
             </div>
@@ -71,7 +70,7 @@ const shop = useShopStore();
 
         <a href="/checkout">
           <button
-              class="flex justify-center bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-500 text-white rounded-md p-3 w-full"
+              class="flex justify-center bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-500 text-black rounded-md p-3 w-full"
           >
             Checkout
           </button>
@@ -82,3 +81,13 @@ const shop = useShopStore();
     <div v-else class="mt-10">Nothing here, yet!</div>
   </div>
 </template>
+
+<style>
+.w-10 {
+  width: 10%;
+  justify-content: center;
+}
+.text-2xl {
+  padding: 1%;
+}
+</style>
